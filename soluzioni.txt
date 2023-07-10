@@ -30,12 +30,12 @@ SELECT *
 FROM `degrees` 
 WHERE `level` = 'magistrale';
 
-soluzione numero 6:
+soluzione numero 7:
 SELECT COUNT(`name`)
 AS conteggio
 FROM `departments`;
 
-soluzione numero 7:
-SELECT * 
+soluzione numero 8:
+SELECT COUNT(`name`) 
 FROM `teachers`
 WHERE `phone` IS NULL;
