@@ -1,0 +1,11 @@
+SOLUZIONI GROUP BY
+
+Soluzione 1:
+
+Soluzione 2:
+SELECT `office_address` , COUNT(`office_address`)
+FROM `teachers` 
+GROUP BY `office_address`
+HAVING COUNT(`office_address`) > 1;
+
+Soluzione 3:
