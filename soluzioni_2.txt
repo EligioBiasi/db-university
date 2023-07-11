@@ -17,3 +17,11 @@ FROM `exam_student`
 GROUP BY `student_id`
 
 Soluzione 4:
+SELECT `department_id`, COUNT(`name`) 
+FROM `degrees`
+GROUP BY(`department_id`);
+
+SOLUZIONI JOIN
+
+Soluzione 1:
+
