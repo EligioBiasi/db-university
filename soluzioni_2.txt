@@ -52,3 +52,22 @@ FROM `students`
 LEFT JOIN `degrees`
 ON `students`.`degree_id` = `degrees`.`id`
 ORDER BY `students`.`surname` ASC;
+
+Soluzione 5:
+SELECT *
+FROM `courses`
+JOIN `teachers`
+ON `courses`.`id` = `teachers`.`id`
+JOIN `degrees`
+ON `courses`.`degree_id` = `degrees`.`id`;
+
+Soluzione 6:
+SELECT *
+FROM `courses`
+JOIN `teachers`
+ON `courses`.`id` = `teachers`.`id`
+JOIN `degrees`
+ON `courses`.`degree_id` = `degrees`.`id`
+JOIN `departments`
+ON `degrees`.`department_id` = `departments`.`id`
+WHERE `departments`.`name` = 'Dipartimento di Matematica';
