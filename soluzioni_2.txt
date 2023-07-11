@@ -24,4 +24,31 @@ GROUP BY(`department_id`);
 SOLUZIONI JOIN
 
 Soluzione 1:
+SELECT * 
+FROM `degrees`
+JOIN `students`
+ON `students`.`degree_id` = `degrees`.`id`
+WHERE `degrees`.`name` = 'Corso di Laurea in Economia';
 
+Soluzione 2:
+SELECT *
+FROM `degrees`
+JOIN `departments`
+ON `departments`.`id` = `degrees`.`department_id`
+WHERE `degrees`.`level` = 'Magistrale' 
+AND `departments`.name = 'Dipartimento di Neuroscienze';
+
+Soluzione 3:
+SELECT *
+FROM `courses`
+JOIN `teachers`
+ON `courses`.`id` = `teachers`.`id`
+WHERE `teachers`.`name` = 'Fulvio' 
+AND `teachers`.`surname` = 'Amato';
+
+Soluzione 4:
+SELECT *
+FROM `students`
+LEFT JOIN `degrees`
+ON `students`.`degree_id` = `degrees`.`id`
+ORDER BY `students`.`surname` ASC;
